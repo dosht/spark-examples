@@ -13,3 +13,7 @@ sbt publish-local
 ```
 
 The previous steps works on scala 2.10.3 and sbt 0.13.0
+
+-----------------------------
+
+Tweet to [@dosht](https://twitter.com/intent/tweet?screen_name=dosht)
