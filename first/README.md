@@ -15,3 +15,6 @@ sbt package
 ```
 sbt run
 ```
+-----------------------------
+
+Tweet to [@dosht](https://twitter.com/intent/tweet?screen_name=dosht)
