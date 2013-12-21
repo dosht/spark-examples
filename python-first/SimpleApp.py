@@ -1,6 +1,7 @@
 from pyspark import SparkContext
+import os
 
-logFile = "/home/msameh/osrc/incubator-spark/README.md"
+logFile = "%s/README.md" % os.environ.get("SPARK_HOME", "../incubator-spark")
 sc = SparkContext("local", "Simple PyApp")
 
 logData = sc.textFile(logFile).cache()
