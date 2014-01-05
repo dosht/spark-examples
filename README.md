@@ -8,11 +8,8 @@ These examples runs on scala 2.10 which is still not supported on spark master b
 ```
 git clone git@github.com:apache/incubator-spark.git
 cd incubator-spark
-git checkout scala-2.10
 sbt publish-local
 ```
-
-The previous steps works on scala 2.10.3 and sbt 0.13.0
 
 -----------------------------
 
