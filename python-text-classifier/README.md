@@ -20,7 +20,7 @@ export PYTHONPATH=$PYTHONPATH:~/osrc/incubator-spark/python # a location in your
 
 3. Run the example
 ```
-python SimpleApp.py
+python out-of-core_classification_spark.py
 ```
 
 -----------------------------
