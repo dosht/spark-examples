@@ -263,7 +263,10 @@ def merge((cf1, stats1), (cf2, stats2)):
     new.intercept_ += cf2.intercept_
     return new, stats1
 
-sgd, stats = sc.parallelize(minibatch_iterators).map(lambda batch: learn(classifier, stats, batch)).reduce(lambda l, r: merge(l, r))
+# Map/Reduce on Spark
+sgd, stats = sc.parallelize(minibatch_iterators)
+    .map(lambda batch: learn(classifier, stats, batch))
+    .reduce(lambda l, r: merge(l, r))
 
 
 def plot_accuracy(x, y, plot_placement, x_legend):
