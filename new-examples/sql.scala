@@ -22,7 +22,8 @@ case class Person(firstName: String, lastName: String, country: String, email: S
 def toPerson(row: Row) = Person(row.getString(3), row.getString(6), row getString 1, row getString 2, row getString 5)
 selection.map(toPerson).collect()
 
-val morePersons = sc.parallelize(List(Person("Mostafa", "Abdulhamid", "Egypt", "mosafa@cake.net", "127.0.0.1"))).union(selection map toPerson)
+val morePersons = sc.parallelize(List(Person("Mostafa", "Abdulhamid", "Egypt", "mosafa@cake.net", "127.0.0.1")))
+  .union(selection map toPerson)
 morePersons.toDF().registerTempTable("Persons")
 
 sqlContext.sql("SELECT firstName, lastName from Persons").show()
